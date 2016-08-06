@@ -46,7 +46,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\levelGenerator.cs" />
-     <Compile Include="Assets\tileScript.cs" />
+     <Compile Include="Assets\Scripts\pickupScript.cs" />
+     <Compile Include="Assets\Scripts\statScript.cs" />
+     <Compile Include="Assets\Scripts\tileScript.cs" />
+     <Compile Include="Assets\cameraFollow.cs" />
+     <Compile Include="Assets\m_Player.cs" />
+     <Compile Include="Assets\restartMenu.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

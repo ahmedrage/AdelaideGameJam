@@ -5,6 +5,7 @@ public class levelGenerator : MonoBehaviour {
 	public GameObject tilePrefab;
 	public GameObject currentTile;
 	public Renderer _renderer;
+	public int state;
 	// Use this for initialization
 	void Start () {
 		currentTile = GameObject.Find("startTile");
