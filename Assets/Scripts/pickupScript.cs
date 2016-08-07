@@ -10,6 +10,7 @@ public class pickupScript : MonoBehaviour {
 	public float value;
 	public AudioSource moneySound;
 	public statScript stats;
+	public GameObject particleEffect;
 	// Use this for initialization
 	void Start () {
 		stats = GameObject.FindGameObjectWithTag ("Gm").GetComponent<statScript> ();
@@ -26,6 +27,7 @@ public class pickupScript : MonoBehaviour {
 			stats.timeLeft += value / 100;
 			moneySound = other.gameObject.GetComponent<AudioSource> ();
 			moneySound.Play ();
+			Instantiate (particleEffect, transform.position, particleEffect.transform.rotation);
 			Destroy (gameObject);
 		} else if (type == pickUpType.hidingSpot) {
 			if (other.gameObject.tag == "Player") {

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class cameraFollow : MonoBehaviour {
 	public GameObject player;
+	bool started;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
@@ -10,6 +11,6 @@ public class cameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = new Vector3 (player.transform.position.x + Camera.main.orthographicSize * (Screen.width / Screen.height) * 1.1f , transform.position.y, transform.position.z);
+		transform.position = new Vector3 (player.transform.position.x + Camera.main.orthographicSize * (Screen.width / Screen.height) / 2 , transform.position.y, transform.position.z);
 	}
 }

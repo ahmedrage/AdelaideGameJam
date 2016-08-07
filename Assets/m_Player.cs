@@ -23,6 +23,7 @@ public class m_Player : MonoBehaviour {
 		} else if ((Input.GetKeyDown (KeyCode.S))) {
 			Move(false);
 		}
+
 	}
 
 	void Move (bool isUp) {
