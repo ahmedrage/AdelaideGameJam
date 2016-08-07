@@ -4,7 +4,7 @@ using System.Collections;
 public class pickupScript : MonoBehaviour {
 	public enum pickUpType
 	{
-		Money, hidingSpot
+		Money, hidingSpot, Enemy
 	};
 	public pickUpType type;
 	public float value;
@@ -31,8 +31,11 @@ public class pickupScript : MonoBehaviour {
 			Destroy (gameObject);
 		} else if (type == pickUpType.hidingSpot) {
 			if (other.gameObject.tag == "Player") {
+				Camera.main.gameObject.GetComponent<screenShake> ().Shake ();
 				other.gameObject.GetComponent<m_Player> ().speed = 0.1f;
 			}
+		} else if (type == pickUpType.Enemy) {
+			GameObject.FindGameObjectWithTag ("Gm").GetComponent<statScript> ().Fail ();
 		}
 	}
 }

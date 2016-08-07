@@ -35,7 +35,7 @@ public class statScript : MonoBehaviour {
 			tutorialText.text = tutorialTexts [levelScript.state];
 	}
 
-	void Fail() {
+	public void Fail() {
 		PlayerPrefs.SetFloat ("Money", money);
 		SceneManager.LoadScene (endSceneIndex);
 	}

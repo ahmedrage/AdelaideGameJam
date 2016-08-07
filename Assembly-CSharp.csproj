@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\levelGenerator.cs" />
      <Compile Include="Assets\Scripts\pickupScript.cs" />
+     <Compile Include="Assets\Scripts\screenShake.cs" />
      <Compile Include="Assets\Scripts\statScript.cs" />
      <Compile Include="Assets\Scripts\tileScript.cs" />
      <Compile Include="Assets\cameraFollow.cs" />
