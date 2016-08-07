@@ -5,6 +5,8 @@ public class levelGenerator : MonoBehaviour {
 	public GameObject tilePrefab;
 	public GameObject currentTile;
 	public Renderer _renderer;
+	public int state;
+	bool moved;
 	// Use this for initialization
 	void Start () {
 		currentTile = GameObject.Find("startTile");
@@ -15,6 +17,14 @@ public class levelGenerator : MonoBehaviour {
 	void Update () {
 		if (_renderer.isVisible) {
 			spawnTile ();
+		}
+		if (moved == false && Input.GetKeyDown (KeyCode.W)) {
+			moved = true;
+			state = 1;
+		}
+
+		if (GetComponent<statScript> ().money > 0) {
+			state = 2;
 		}
 	}
 
